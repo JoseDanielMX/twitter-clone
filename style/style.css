@@ -1,4 +1,55 @@
+/***** BASE STYLES *****/
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+/***** MAIN CONTENT *****/
+
+main {
+    background-color: #0F0F11;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+.nav-container {
+    width: 20%;
+    max-width: 100px;
+    min-width: 70px;
+}
+
+.tweets-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.tweets-search {
+    height: 70px;
+    margin: 20px;
+}
+
+.tweets-list {
+    height: 500px;
+    margin: 20px;
+}
+
+.tweet-container {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    margin: 10px;
+}
+
+.trends-container {
+    display: flex;
+    flex: 1;
+}
+
+.trends-list {
+    width: 200px;
+    height: 500px;
+    margin: 20px;
 }
