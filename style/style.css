@@ -5,7 +5,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/***** MAIN CONTENT *****/
+/***** MAIN *****/
 
 main {
     background-color: #0F0F11;
@@ -14,11 +14,15 @@ main {
     display: flex;
 }
 
+/***** NAV *****/
+
 .nav-container {
     width: 20%;
     max-width: 100px;
     min-width: 70px;
 }
+
+/***** TWEETS *****/
 
 .tweets-container {
     display: flex;
@@ -42,6 +46,8 @@ main {
     height: 100px;
     margin: 10px;
 }
+
+/***** TRENDS *****/
 
 .trends-container {
     display: flex;
