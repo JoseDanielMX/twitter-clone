@@ -63,7 +63,7 @@ body {
     border: 1px solid #979797;
 }
 
-/***** TWEETS *****/
+/***** MAIN *****/
 
 .tweets-container {
     display: flex;
@@ -72,8 +72,30 @@ body {
 }
 
 .tweets-search {
-    height: 70px;
-    margin: 20px;
+    display: flex;
+    align-items: center;
+    margin: 30px 20px 20px;
+    border-bottom: 1px solid #979797;
+}
+
+.tweets-search input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    padding: 0 10px;
+}
+
+.tweets-search input:focus {
+    border: none;
+    outline: none;
+}
+
+.tweets-search i {
+    color: white;
+    font-size: 16px;
+    padding-right: 10px;
 }
 
 .tweets-list {
