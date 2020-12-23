@@ -20,6 +20,47 @@ main {
     width: 20%;
     max-width: 100px;
     min-width: 70px;
+    border-right: 1px solid #1C1C1C;
+}
+
+.nav-content {
+    color: white;
+    margin-top: 30px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo i {
+    font-size: 30px;
+}
+
+.home-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 3px solid #00ADFF;
+    height: 40px;
+    margin-top: 20px;
+}
+
+.home-link i {
+    color: #00ADFF;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #979797;
 }
 
 /***** TWEETS *****/
