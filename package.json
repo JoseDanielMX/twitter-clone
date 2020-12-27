@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/JoseDanielMX/twitter-clone/issues"
   },
-  "homepage": "https://github.com/JoseDanielMX/twitter-clone#readme"
+  "homepage": "https://github.com/JoseDanielMX/twitter-clone#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
