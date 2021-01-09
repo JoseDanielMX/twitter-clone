@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 const Twitter = require('./api/helpers/twitter')
 const twitter = new Twitter()
 const port = 3000
