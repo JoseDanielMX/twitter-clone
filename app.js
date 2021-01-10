@@ -1,9 +1,9 @@
 const express = require('express')
 const cors = require('cors')
+const app = express()
 app.use(cors())
 const helmet = require('helmet')
 app.use(helmet())
-const app = express()
 const Twitter = require('./api/helpers/twitter')
 const twitter = new Twitter()
 const port = 3000
