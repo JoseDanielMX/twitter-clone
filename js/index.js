@@ -4,8 +4,11 @@ const URL = "http://localhost:3000/tweets";
  * Retrive Twitter Data from API
  */
 const getTwitterData = () => {
-    const url = "http://localhost:3000/tweets?q=coding&count=10";
-    fetch(url).then((response) => {
+    const query = document.getElementById('user-search-input').value;
+    if (!query) return;
+    const encodedQuery = encodeURIComponent(query);
+    const fullUrl = `${URL}?q=${encodedQuery}&count=10`;
+    fetch(fullUrl).then((response) => {
         return response.json();
     }).then((data) => {
         console.log(data);
