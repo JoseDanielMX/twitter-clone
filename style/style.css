@@ -96,6 +96,7 @@ body {
     color: white;
     font-size: 16px;
     padding-right: 10px;
+    cursor: pointer;
 }
 
 .tweets-list {
