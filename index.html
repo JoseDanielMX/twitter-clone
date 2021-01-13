@@ -27,7 +27,7 @@
             </nav>
             <main class="tweets-container">
                 <div class="tweets-search">
-                    <input id="user-search-input" type="text" placeholder="Search tweets">
+                    <input id="user-search-input" type="text" placeholder="Search tweets" onkeyup="onEnter(event)">
                     <i class="fas fa-search" onclick="getTwitterData()"></i>
                 </div>
                 <div class="tweets-list">

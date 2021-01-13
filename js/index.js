@@ -1,7 +1,16 @@
 const URL = "http://localhost:3000/tweets";
 
 /**
- * Retrive Twitter Data from API
+ * Call getTwitterData() function by pressing enter
+ */
+const onEnter = (e) => {
+    if (e.key == "Enter") {
+        getTwitterData();
+    }
+}
+
+/**
+ * Retrieve Twitter Data from API
  */
 const getTwitterData = () => {
     const query = document.getElementById('user-search-input').value;
