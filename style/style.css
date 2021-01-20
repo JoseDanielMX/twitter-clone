@@ -139,10 +139,20 @@ body {
 }
 
 .tweet-images-container {
+    display: flex;
+    flex-wrap: wrap;
     height: 200px;
     margin: 20px 20px 0;
     border: 1px solid #1C1C1C;
     border-radius: 10px;
+    overflow: hidden;
+}
+
+.tweet-image {
+    background-size: cover;
+    background-position: center;
+    flex-basis: 50%;
+    flex-grow: 1;
 }
 
 .tweet-text-container {
