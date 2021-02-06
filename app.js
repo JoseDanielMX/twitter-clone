@@ -6,7 +6,7 @@ const helmet = require('helmet')
 app.use(helmet())
 const Twitter = require('./api/helpers/twitter')
 const twitter = new Twitter()
-const port = 3000
+const port = 8080
 require('dotenv').config()
 
 app.get('/tweets', (req, res) => {

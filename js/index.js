@@ -1,4 +1,4 @@
-const URL = "http://localhost:3000/tweets";
+const URL = "http://localhost:8080/tweets";
 
 /**
  * Call getTwitterData() function by pressing enter
