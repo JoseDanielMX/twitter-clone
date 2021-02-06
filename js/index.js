@@ -59,7 +59,7 @@ const buildTweets = (tweets, nextPage) => {
                             Jos&eacute; V&aacute;zquez
                         </div>
                         <div class="tweet-user-handle">
-                            @jduvmx
+                            @eltwdejose
                         </div>
                     </div>
                 </div>
