@@ -16,7 +16,7 @@ const getTwitterData = () => {
     const query = document.getElementById('user-search-input').value;
     if (!query) return;
     const encodedQuery = encodeURIComponent(query);
-    const fullUrl = `${URL}?q=${encodedQuery}&max_results=10&expansions=attachments.media_keys`;
+    const fullUrl = `${URL}?q=${encodedQuery}&max_results=10&expansions=attachments.media_keys&media.fields=type,preview_image_url,url`;
     fetch(fullUrl).then((response) => {
         return response.json();
     }).then((data) => {

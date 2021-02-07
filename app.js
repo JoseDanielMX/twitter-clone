@@ -13,7 +13,8 @@ app.get('/tweets', (req, res) => {
     const query = req.query.query;
     const max_results = req.query.max_results;
     const expansions = req.query.expansions;
-    twitter.get(query, max_results, expansions).then((response) => {
+    const media = req.query.media.fields;
+    twitter.get(query, max_results, expansions, media).then((response) => {
         res.status(200).send(response.data);
     }).catch((error) => {
         res.status(400).send(error);
