@@ -12,7 +12,8 @@ require('dotenv').config()
 app.get('/tweets', (req, res) => {
     const query = req.query.query;
     const max_results = req.query.max_results;
-    twitter.get(query, max_results).then((response) => {
+    const expansions = req.query.expansions;
+    twitter.get(query, max_results, expansions).then((response) => {
         res.status(200).send(response.data);
     }).catch((error) => {
         res.status(400).send(error);
