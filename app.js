@@ -10,7 +10,7 @@ const port = 8080
 require('dotenv').config()
 
 app.get('/tweets', (req, res) => {
-    const query = req.query.q;
+    const query = req.query.query;
     const max_results = req.query.max_results;
     twitter.get(query, max_results).then((response) => {
         res.status(200).send(response.data);
