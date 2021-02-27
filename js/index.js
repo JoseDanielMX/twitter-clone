@@ -49,33 +49,33 @@ const buildTweets = (tweets, nextPage) => {
   let twitterContent = ''
   tweets.map((tweet) => {
     twitterContent += `
-            <div class="tweet-container">
-                <div class="tweet-user-info">
-                    <div class="tweet-user-avatar">
+        <div class="tweet-container">
+            <div class="tweet-user-info">
+                <div class="tweet-user-avatar">
 
-                    </div>
-                    <div class="tweet-user-data">
-                        <div class="tweet-user-name">
-                            Jos&eacute; V&aacute;zquez
-                        </div>
-                        <div class="tweet-user-handle">
-                            @eltwdejose
-                        </div>
-                    </div>
                 </div>
-                <div class="tweet-images-container">
-                    <div class="tweet-image">
-                        
+                <div class="tweet-user-data">
+                    <div class="tweet-user-name">
+                        Jos&eacute; V&aacute;zquez
+                    </div>
+                    <div class="tweet-user-handle">
+                        @eltwdejose
                     </div>
                 </div>
-                <div class="tweet-text-container">
-                    ${tweet.text}
-                </div>
-                <div class="tweet-date-container">
-                    20 hours ago
-                </div>
-            </div>        
-        `
+            </div>
+     `
+        if (tweet.includes && tweet.includes.media.length > 0) {
+          twitterContent += buildImages(tweet.includes.media);
+        }
+    twitterContent += `
+            <div class="tweet-text-container">
+                ${tweet.text}
+            </div>
+            <div class="tweet-date-container">
+                20 hours ago
+            </div>
+        </div>        
+     `
   })
   document.querySelector('.tweets-list').innerHTML = twitterContent
 }
@@ -83,7 +83,18 @@ const buildTweets = (tweets, nextPage) => {
 /**
  * Build HTML for Tweets Images
  */
-const buildImages = (mediaList) => {}
+const buildImages = (mediaList) => {
+    let imagesContent = `<div class="tweet-images-container">`;
+    let imageExists = false;
+    mediaList.map((media) => {
+      if (media.type == "photo") {
+        imageExists = true;
+            imagesContent += `div class="tweet-image" style="background-image: url(${media.preview_image_url})"></div>`
+        }
+    });
+    imagesContent += `</div>`
+    return imageExists ? imagesContent : '';
+}
 
 /**
  * Build HTML for Tweets Video
