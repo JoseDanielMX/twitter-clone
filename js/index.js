@@ -48,15 +48,14 @@ const buildTweets = (tweets, nextPage) => {
     twitterContent += `
       <div class="tweet-container">
         <div class="tweet-user-info">
-          <div class="tweet-user-avatar">
-
+          <div class="tweet-user-avatar" style="background-image: url(${tweet.user.profile_image_url_https})">
           </div>
           <div class="tweet-user-data">
             <div class="tweet-user-name">
-                Jos&eacute; V&aacute;zquez
+                ${tweet.user.name}
             </div>
             <div class="tweet-user-handle">
-                @eltwdejose
+                @${tweet.user.screen_name}
             </div>
           </div>
         </div>
