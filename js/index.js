@@ -62,7 +62,8 @@ const buildTweets = (tweets, nextPage) => {
         </div>
      `
       if (tweet.extended_entities && tweet.extended_entities.media && tweet.extended_entities.media.length > 0) {
-          twitterContent += buildImages(tweet.extended_entities.media);
+        twitterContent += buildImages(tweet.extended_entities.media);
+        twitterContent += buildVideo(tweet.extended_entities.media);
       }
     twitterContent += `
         <div class="tweet-text-container">
@@ -81,14 +82,14 @@ const buildTweets = (tweets, nextPage) => {
  * Build HTML for Tweets Images
  */
 const buildImages = (mediaList) => {
-    let imagesContent = `<div class="tweet-images-container">`;
-    let imageExists = false;
-    mediaList.map((media) => {
-      if (media.type == "photo") {
-        imageExists = true;
-        imagesContent += `<div class="tweet-image" style="background-image: url(${media.media_url_https})"></div>`
-        }
-    });
+  let imagesContent = `<div class="tweet-images-container">`;
+  let imageExists = false;
+  mediaList.map((media) => {
+    if (media.type == "photo") {
+      imageExists = true;
+      imagesContent += `<div class="tweet-image" style="background-image: url(${media.media_url_https})"></div>`
+    }
+  });
   imagesContent += `</div>`;
   return (imageExists ? imagesContent : '');
 }
@@ -96,4 +97,26 @@ const buildImages = (mediaList) => {
 /**
  * Build HTML for Tweets Video
  */
-const buildVideo = (mediaList) => {}
+const buildVideo = (mediaList) => {
+  let videoContent = `<div class="tweet-video-container">`;
+  let videoExists = false;
+  mediaList.map((media) => {
+    if (media.type == "video") {
+      videoExists = true;
+      videoContent += `
+      <video controls>
+        <source src="${media.video_info.variants[0].url}" type="video/mp4">
+      </video>
+      `
+    } else if (media.type == "animated_gif") {
+      videoExists = true;
+      videoContent += `
+      <video loop autoplay>
+        <source src="${media.video_info.variants[0].url}" type="video/mp4">
+      </video>
+      `
+    }
+  });
+  videoContent += `</div>`;
+  return (videoExists ? videoContent : '');
+}
