@@ -157,3 +157,10 @@ const buildVideo = (mediaList) => {
   videoContent += `</div>`;
   return (videoExists ? videoContent : '');
 }
+
+/**
+ * Reload page
+ */
+const reloadPage = () => {
+  document.location.reload()
+}
