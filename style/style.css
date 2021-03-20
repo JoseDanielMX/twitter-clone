@@ -18,23 +18,20 @@ body {
 
 .nav-container {
     width: 20%;
-    max-width: 100px;
-    min-width: 70px;
     border-right: 1px solid #1C1C1C;
 }
 
 .nav-content {
     color: white;
     width: 20%;
-    max-width: 100px;
-    min-width: 70px;
     margin-top: 30px;
     position: fixed;
 }
 
 .logo {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    margin: 0 18px;
 }
 
 .logo i {
@@ -43,7 +40,7 @@ body {
 
 .home-link {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     border-right: 3px solid #00ADFF;
     height: 40px;
@@ -51,14 +48,16 @@ body {
 }
 
 .home-link i {
+    font-size: 16px;
     color: #00ADFF;
     cursor: pointer;
+    margin: 0 23px;
 }
 
 .profile-container {
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    justify-content: flex-end;
+    margin: 20px 20px 0;
 }
 
 .avatar {
@@ -72,7 +71,7 @@ body {
 
 .tweets-container {
     display: flex;
-    flex: 1;
+    width: 50%;
     flex-direction: column;
 }
 
@@ -212,11 +211,10 @@ body {
 
 .trends-container {
     display: flex;
-    flex: 1;
+    width: 20%;
 }
 
 .trends-list {
-    width: 300px;
     height: 270px;
     margin-top: 30px;
     background-color: rgb(44, 44, 44);
@@ -234,8 +232,8 @@ body {
 .tweets-trending h4 {
     color: #A5A5A6;
     font-size: 24px;
-    margin: 0 0 10px;
-    padding: 0 0 0 10px;
+    margin: 0 10px 10px;
+    padding: 0 10px 10px;
 }
 
 .tweets-trending ul {
