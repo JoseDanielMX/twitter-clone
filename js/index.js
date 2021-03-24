@@ -103,6 +103,9 @@ const buildTweets = (tweets, nextPage) => {
         <div class="tweet-date-container">
             ${createdDate}
         </div>
+        <div class="tweet-link-container">
+          <a href="https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}" target="_blank">See on Twitter</a>
+        </div>
       </div>        
      `
   })
