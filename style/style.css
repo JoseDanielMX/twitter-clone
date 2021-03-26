@@ -1,9 +1,14 @@
 /***** BASE STYLES *****/
 
+html {
+    font-size: 16px;
+}
+
 body {
     background-color: #0F0F11;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
 }
 
 /***** GRID *****/
@@ -35,7 +40,7 @@ body {
 }
 
 .logo i {
-    font-size: 30px;
+    font-size: 1.875em;
 }
 
 .home-link {
@@ -48,7 +53,7 @@ body {
 }
 
 .home-link i {
-    font-size: 16px;
+    font-size: 1em;
     color: #00ADFF;
     cursor: pointer;
     margin: 0 23px;
@@ -61,7 +66,7 @@ body {
 }
 
 .profile-container i {
-    font-size: 25px;
+    font-size: 1.5625em;
     color: #979797;
     margin: 0 4px;
 }
@@ -86,7 +91,7 @@ body {
     background-color: transparent;
     border: none;
     color: white;
-    font-size: 30px;
+    font-size: 1.875em;
     padding: 0 10px;
 }
 
@@ -97,7 +102,7 @@ body {
 
 .tweets-search i {
     color: white;
-    font-size: 16px;
+    font-size: 1em;
     padding-right: 10px;
     cursor: pointer;
 }
@@ -141,11 +146,11 @@ body {
 }
 
 .tweet-user-name {
-    font-size: 10px;
+    font-size: 0.625em;
 }
 
 .tweet-user-handle {
-    font-size: 8px;
+    font-size: 0.5em;
 }
 
 .tweet-images-container {
@@ -180,18 +185,18 @@ body {
 
 .tweet-text-container {
     color: rgb(255, 255, 255, 0.74);
-    font-size: 15px;
+    font-size: 0.9375em;
     margin: 20px 20px 0;
 }
 
 .tweet-date-container {
     color: #47525D;
-    font-size: 10px;
+    font-size: 0.625em;
     margin: 10px 20px;
 }
 
 .tweet-link-container {
-    font-size: 10px;
+    font-size: 0.625em;
     margin: 0 20px 10px;
 }
 
@@ -247,7 +252,7 @@ body {
 
 .tweets-trending h4 {
     color: #A5A5A6;
-    font-size: 24px;
+    font-size: 1.5em;
     margin: 0 10px 10px;
     padding: 0 10px 10px;
 }
@@ -261,7 +266,7 @@ body {
 .tweets-trending ul li {
     cursor: pointer;
     color: #848586;
-    font-size: 22px;
+    font-size: 1.375em;
     padding: 8px 0 5px 20px;
     border-bottom: 1px solid #D8D8D8;
 }
