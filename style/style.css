@@ -14,61 +14,38 @@ body {
 /***** GRID *****/
 
 .container {
-    width: 100%;
-    min-height: 100vh;
     display: flex;
+    align-items: center;
+    flex-flow: column;
 }
 
 /***** NAV *****/
 
-.nav-container {
-    width: 20%;
-    border-right: 1px solid #1C1C1C;
-}
-
 .nav-content {
-    color: white;
-    width: 20%;
-    margin-top: 30px;
-    position: fixed;
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+    padding: 20px 0 10px;
 }
 
-.logo {
-    display: flex;
-    justify-content: flex-end;
-    margin: 0 18px;
+.nav-content i {
+    padding: 0 20px;
 }
 
 .logo i {
     font-size: 1.875em;
-}
-
-.home-link {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    border-right: 3px solid #00ADFF;
-    height: 40px;
-    margin-top: 20px;
+    color: #FFF;
 }
 
 .home-link i {
     font-size: 1em;
     color: #00ADFF;
     cursor: pointer;
-    margin: 0 23px;
-}
-
-.profile-container {
-    display: flex;
-    justify-content: flex-end;
-    margin: 20px 20px 0;
 }
 
 .profile-container i {
     font-size: 1.5625em;
     color: #979797;
-    margin: 0 4px;
 }
 
 /***** MAIN *****/
@@ -274,4 +251,60 @@ body {
 .tweets-trending ul li:hover {
     background-color: rgb(255, 255, 255, 0.1);
     color: rgb(255, 255, 255, 0.74);
+}
+
+/***** DESKTOP *****/
+
+@media only screen and (min-width: 1024px) {
+
+    /***** GRID *****/
+
+    .container {
+        align-items: stretch;
+        flex-flow: row;
+    }
+
+    /***** NAV *****/
+
+    .nav-container {
+        display: flex;
+        justify-content: flex-end;
+        width: 20%;
+        border-right: 1px solid #1C1C1C;
+        min-height: 100vh;
+    }
+
+    .nav-content {
+        flex-flow: column;
+        margin-top: 30px;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .home-link {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        border-right: 3px solid #00ADFF;
+        height: 40px;
+        margin-top: 20px;
+    }
+
+    .home-link i {
+        margin: 0 29px;
+    }
+
+    .profile-container {
+        display: flex;
+        justify-content: flex-end;
+        margin: 20px 20px 0;
+    }
+
+    .profile-container i {
+        margin-right: 5px;
+    }
+
 }
