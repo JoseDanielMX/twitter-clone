@@ -52,14 +52,14 @@ body {
 
 .tweets-container {
     display: flex;
-    width: 50%;
+    width: 90%;
     flex-direction: column;
 }
 
 .tweets-search {
     display: flex;
     align-items: center;
-    margin: 30px 20px 0;
+    margin: 15px;
     border-bottom: 1px solid #979797;
 }
 
@@ -70,6 +70,7 @@ body {
     color: white;
     font-size: 1.875em;
     padding: 0 10px;
+    width: 90%;
 }
 
 .tweets-search input:focus {
@@ -307,4 +308,14 @@ body {
         margin-right: 5px;
     }
 
+    /***** MAIN *****/
+
+    .tweets-container {
+        width: 50%;
+    }
+
+    .tweets-search {
+        margin: 30px 20px 0;
+    }
+    
 }
