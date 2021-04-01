@@ -191,7 +191,7 @@ body {
 }
 
 .next-page-container {
-    margin: 0 20px 20px;
+    margin: 0 20px;
     padding: 6px;
     color: #47525D;
     border: 1px solid #1C1C1C;
@@ -210,7 +210,7 @@ body {
 
 .trends-container {
     display: flex;
-    width: 20%;
+    margin: 0 0 50px;
 }
 
 .trends-list {
@@ -220,7 +220,6 @@ body {
     border: 1px solid #979797;
     border-radius: 10px;
     overflow: hidden;
-    position: fixed;
 }
 
 .tweets-trending {
@@ -317,5 +316,10 @@ body {
     .tweets-search {
         margin: 30px 20px 0;
     }
-    
+        
+    /***** TRENDS *****/
+
+    .trends-list {
+        position: fixed;
+    }
 }
