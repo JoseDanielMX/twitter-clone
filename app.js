@@ -6,7 +6,6 @@ const helmet = require('helmet')
 app.use(helmet())
 const Twitter = require('./api/helpers/twitter')
 const twitter = new Twitter()
-const port = 8080
 require('dotenv').config()
 
 app.get('/tweets', (req, res) => {
@@ -20,4 +19,6 @@ app.get('/tweets', (req, res) => {
     })
 })
 
-app.listen(port, () => console.log(`Listening on port ${port}`))
+const PORT = process.env.PORT
+
+app.listen(PORT, () => console.log(`Listening`))
