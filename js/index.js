@@ -1,4 +1,4 @@
-const URL = 'https://jdvz-twitter-clone.herokuapp.com'
+const URL = 'https://jdvz-twitter-clone.herokuapp.com/tweets'
 let nextPageUrl = null
 
 /**
