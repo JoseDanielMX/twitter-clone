@@ -139,26 +139,28 @@ const buildVideo = (mediaList) => {
   let videoContent = `<div class="tweet-video-container">`;
   let videoExists = false;
   mediaList.map((media) => {
-    if (media.type == "video") {
+    if(media.type == "video" || media.type == 'animated_gif'){
       videoExists = true;
-      const videoVariant = media.video_info.variants.find((variant) => variant.content_type == 'video/mp4');
+      const video = media.video_info.variants.find((video) => video.content_type == 'video/mp4');
+      const videoOptions = getVideoOptions(media.type);
       videoContent += `
-      <video controls>
-        <source src="${videoVariant.url}" type="video/mp4">
-      </video>
-      `
-    } else if (media.type == "animated_gif") {
-      videoExists = true;
-      const videoVariant = media.video_info.variants.find((variant) => variant.content_type == 'video/mp4');
-      videoContent += `
-      <video loop autoplay>
-        <source src="${videoVariant.url}" type="video/mp4">
+      <video ${videoOptions}>
+        <source src="${video.url}" type="video/mp4">
+        Your browser does not support HTML5 video.
       </video>
       `
     }
-  });
+  })
   videoContent += `</div>`;
   return (videoExists ? videoContent : '');
+}
+
+const getVideoOptions = (mediaType) => {
+  if(mediaType == 'animated_gif'){
+    return "loop autoplay";
+  } else {
+    return "controls";
+  }
 }
 
 /**
