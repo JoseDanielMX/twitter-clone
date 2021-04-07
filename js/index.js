@@ -87,7 +87,7 @@ const buildTweets = (tweets, nextPage) => {
                 ${tweet.user.name}
             </div>
             <div class="tweet-user-handle">
-                @${tweet.user.screen_name}
+                <a href="https://twitter.com/${tweet.user.screen_name}" target="_blank">@${tweet.user.screen_name}</a>
             </div>
           </div>
         </div>
