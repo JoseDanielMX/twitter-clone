@@ -132,6 +132,7 @@ body {
 }
 
 .tweet-user-handle a:link, a:visited {
+    color: #FFF;
     text-decoration: none;
 }
 
