@@ -286,6 +286,7 @@ body {
     .nav-content {
         flex-flow: column;
         margin-top: 30px;
+        position: fixed;
     }
 
     .logo {
