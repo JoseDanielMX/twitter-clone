@@ -327,6 +327,10 @@ body {
         margin: 30px 20px 0;
     }
         
+    .next-page-container {
+        margin: 10px 20px 30px;
+    }
+        
     /***** TRENDS *****/
 
     .trends-list {
